@@ -122,6 +122,9 @@ const DEFAULT_RICH_TEXT_KIT_OPTIONS: Partial<RichTextKitOptions> = {
     link: {
         openOnClick: false,
     },
+    taskList: {
+        nested: true,
+    },
 }
 
 export { DEFAULT_ARG_TYPES, DEFAULT_RICH_TEXT_KIT_OPTIONS, DEFAULT_STORY_ARGS }

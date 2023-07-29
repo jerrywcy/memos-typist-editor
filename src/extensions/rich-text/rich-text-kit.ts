@@ -13,6 +13,7 @@ import { ListItem } from '@tiptap/extension-list-item'
 import { OrderedList } from '@tiptap/extension-ordered-list'
 import { Paragraph } from '@tiptap/extension-paragraph'
 import { Strike } from '@tiptap/extension-strike'
+import { TaskList } from '@tiptap/extension-task-list'
 import { Text } from '@tiptap/extension-text'
 import { Typography } from '@tiptap/extension-typography'
 
@@ -30,6 +31,7 @@ import { RichTextDocument } from './rich-text-document'
 import { RichTextHorizontalRule } from './rich-text-horizontal-rule'
 import { RichTextImage } from './rich-text-image'
 import { RichTextLink } from './rich-text-link'
+import { RichTextTaskItem } from './rich-text-task-item'
 
 import type { Extensions } from '@tiptap/core'
 import type { BlockquoteOptions } from '@tiptap/extension-blockquote'
@@ -46,6 +48,7 @@ import type { ListItemOptions } from '@tiptap/extension-list-item'
 import type { OrderedListOptions } from '@tiptap/extension-ordered-list'
 import type { ParagraphOptions } from '@tiptap/extension-paragraph'
 import type { StrikeOptions } from '@tiptap/extension-strike'
+import type { TaskItemOptions } from '@tiptap/extension-task-item'
 import type { RichTextDocumentOptions } from './rich-text-document'
 import type { RichTextHorizontalRuleOptions } from './rich-text-horizontal-rule'
 import type { RichTextImageOptions } from './rich-text-image'
@@ -169,6 +172,11 @@ type RichTextKitOptions = {
      * Set options for the `Strike` extension, or `false` to disable.
      */
     strike: Partial<StrikeOptions> | false
+
+    /**
+     * Set options for the `TaskList` extension, or `false` to disable.
+     */
+    taskList: Partial<TaskItemOptions> | false
 
     /**
      * Set to `false` to disable the `Text` extension.
@@ -309,6 +317,11 @@ const RichTextKit = Extension.create<RichTextKitOptions>({
 
         if (this.options.strike !== false) {
             extensions.push(Strike.configure(this.options?.strike))
+        }
+
+        if (this.options.taskList !== false) {
+            extensions.push(TaskList.configure(this.options?.taskList))
+            extensions.push(RichTextTaskItem)
         }
 
         if (this.options.text !== false) {
