@@ -471,42 +471,42 @@ Strikethrough uses two tildes: ~~scratch this~~`,
                 )
             })
 
-            test('task lists syntax is ignored (unsupported by default)', () => {
+            test('task lists syntax supported', () => {
                 expect(markdownSerializer.serialize(HTML_INPUT_TASK_LISTS)).toBe(
-                    `-   First item
--   Second item
--   Third item
--   Fourth item
+                    `- [ ] First item
+- [x] Second item
+- [x] Third item
+- [ ] Fourth item
 
 ---
 
--   First item
--   Second item
--   Third item
--   Fourth item
+- [x] First item
+- [ ] Second item
+- [ ] Third item
+- [x] Fourth item
 
 ---
 
--   First item
--   Second item
--   Third item
--   Fourth item
+- [x] First item
+- [ ] Second item
+- [x] Third item
+- [ ] Fourth item
 
 ---
 
 - First item
 - Second item
 - Third item
-    -   Indented item
-    -   Indented item
+    - [ ] Indented item
+    - [ ] Indented item
 - Fourth item
 
 ---
 
--   This is the first list item.
--   Here's the second list item.
+- [ ] This is the first list item.
+- [ ] Here's the second list item.
     I need to add another paragraph below the second list item.
--   And here's the third list item.`,
+- [ ] And here's the third list item.`,
                 )
             })
 
