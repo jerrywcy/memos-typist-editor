@@ -1,7 +1,6 @@
 import { Extension } from '@tiptap/core'
 import { Blockquote } from '@tiptap/extension-blockquote'
 import { Bold } from '@tiptap/extension-bold'
-import { BulletList } from '@tiptap/extension-bullet-list'
 import { CodeBlock } from '@tiptap/extension-code-block'
 import { Dropcursor } from '@tiptap/extension-dropcursor'
 import { Gapcursor } from '@tiptap/extension-gapcursor'
@@ -26,6 +25,7 @@ import { BoldAndItalics } from './bold-and-italics'
 import { CurvenoteCodemark } from './curvenote-codemark'
 import { PasteEmojis } from './paste-emojis'
 import { PasteMarkdown } from './paste-markdown'
+import { RichTextBulletList } from './rich-text-bullet-list'
 import { RichTextCode } from './rich-text-code'
 import { RichTextDocument } from './rich-text-document'
 import { RichTextHorizontalRule } from './rich-text-horizontal-rule'
@@ -212,7 +212,7 @@ const RichTextKit = Extension.create<RichTextKitOptions>({
         }
 
         if (this.options.bulletList !== false) {
-            extensions.push(BulletList.configure(this.options?.bulletList))
+            extensions.push(RichTextBulletList.configure(this.options?.bulletList))
         }
 
         if (this.options.code !== false) {
