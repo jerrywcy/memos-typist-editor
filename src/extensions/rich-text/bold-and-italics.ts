@@ -1,9 +1,9 @@
 import { Mark, markInputRule, markPasteRule } from '@tiptap/core'
 
-const starInputRegex = /(?:^|\s)((?:\*{2})((?:[^*]+))(?:\*{2}))$/
-const starPasteRegex = /(?:^|\s)((?:\*{2})((?:[^*]+))(?:\*{2}))/g
-const underscoreInputRegex = /(?:^|\s)((?:_{2})((?:[^_]+))(?:_{2}))$/
-const underscorePasteRegex = /(?:^|\s)((?:_{2})((?:[^_]+))(?:_{2}))/g
+const starInputRegex = /(?:^|\s)((?:\*{3})((?:[^*]+))(?:\*{3}))$/
+const starPasteRegex = /(?:^|\s)((?:\*{3})((?:[^*]+))(?:\*{3}))/g
+const underscoreInputRegex = /(?:^|\s)((?:_{3})((?:[^_]+))(?:_{3}))$/
+const underscorePasteRegex = /(?:^|\s)((?:_{3})((?:[^_]+))(?:_{3}))/g
 
 /**
  * The `BoldAndItalics` extension adds the ability to use the `***` and `___` Markdown shortcuts
