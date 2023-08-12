@@ -1,10 +1,10 @@
 {
-    "name": "@doist/typist",
+    "name": "memos-typist-editor",
     "description": "The mighty Tiptap-based rich-text editor React component that powers Doist products.",
     "version": "1.4.4",
     "license": "MIT",
     "homepage": "https://typist.doist.dev/",
-    "repository": "https://github.com/Doist/typist",
+    "repository": "https://github.com/jerrywcy/memos-typist-editor",
     "prettier": "@doist/prettier-config",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
