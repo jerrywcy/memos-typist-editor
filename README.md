@@ -1,8 +1,8 @@
 <div align="center">
     <h1>
         <picture>
-            <source media="(prefers-color-scheme: dark)" srcSet="https://github.com/Doist/typist/blob/main/.github/assets/logo-dark.png?raw=true" />
-            <img src="https://github.com/Doist/typist/blob/main/.github/assets/logo-light.png?raw=true" />
+            <source media="(prefers-color-scheme: dark)" srcSet="https://pkmer.cn/img/favicon.svg" />
+            <img src="https://pkmer.cn/img/favicon.svg" />
         </picture>
     </h1>
 </div>
