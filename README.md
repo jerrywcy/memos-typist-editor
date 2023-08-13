@@ -1,7 +1,6 @@
 <div align="center">
     <h1>
         <picture>
-            <source media="(prefers-color-scheme: dark)" srcSet="https://pkmer.cn/img/favicon.svg" />
             <img src="https://pkmer.cn/img/favicon.svg" />
         </picture>
     </h1>
