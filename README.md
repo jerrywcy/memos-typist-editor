@@ -9,6 +9,8 @@
 
 Typist is the mighty [Tiptap](https://tiptap.dev/)-based rich-text editor React component that powers Doist products, which can also be used for displaying content in a read-only fashion. Typist also supports a plain-text mode, and comes with HTML/Markdown serializers.
 
+This repository is forked from the original Typist repository to make a customized editor for PKMer Memos.
+
 > **Note**
 >
 > This project is not attempting to be an all-purpose rich-text editor. Whilst everyone is welcome to fork or use this package in their own products, development decisions are centered around Doist product requirements.
