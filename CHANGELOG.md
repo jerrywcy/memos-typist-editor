@@ -1,3 +1,20 @@
+## [1.5.0](https://github.com/jerrywcy/memos-typist-editor/compare/v1.4.0...v1.5.0) (2023-08-13)
+
+### Features
+
+-   TaskItem and TaskList extension ([5db1900](https://github.com/jerrywcy/memos-typist-editor/commit/5db1900a5d0b6faf6c6ab098db6f1aca45ab95fe))
+
+### Bug Fixes
+
+-   Bold and Italic now use **\* and \_\_\_ instead of ** and \_\_ ([cc29ea9](https://github.com/jerrywcy/memos-typist-editor/commit/cc29ea9e5a86d07fa81d7a566f9e6aad6370e716))
+-   change description in package.json ([52a2535](https://github.com/jerrywcy/memos-typist-editor/commit/52a25357029e503769b19bd15e30fb62e64c10d4))
+-   change to memos-typist-editor in package.json ([c8250b1](https://github.com/jerrywcy/memos-typist-editor/commit/c8250b11fa185e9d1522680462675af720435299))
+-   **deps:** update dependency unist-util-remove to v4 ([#380](https://github.com/jerrywcy/memos-typist-editor/issues/380)) ([6c5430a](https://github.com/jerrywcy/memos-typist-editor/commit/6c5430a09d07416d3903aabc48152d1cf056e0ae))
+-   **deps:** update gfm autolink literal packages to v2 (major) ([#378](https://github.com/jerrywcy/memos-typist-editor/issues/378)) ([7ad9af8](https://github.com/jerrywcy/memos-typist-editor/commit/7ad9af8ced7c2aa3a7aa0334d9146e787a834eed))
+-   **deps:** update gfm strikethrough packages to v2 (major) ([#379](https://github.com/jerrywcy/memos-typist-editor/issues/379)) ([b1e411d](https://github.com/jerrywcy/memos-typist-editor/commit/b1e411dbed8cf3533df8b9e0a73933b8c84ab1a0))
+-   Task List now only toggle by typing `[ ]` in bullet list ([ae3103b](https://github.com/jerrywcy/memos-typist-editor/commit/ae3103bf779e656992599a2ff8dfeebd84d79d59))
+-   Unit-tests now support TaskItem and TaskList ([639abf6](https://github.com/jerrywcy/memos-typist-editor/commit/639abf67587b897c9d918950bf13002002383a15))
+
 ## [1.4.4](https://github.com/Doist/typist/compare/v1.4.3...v1.4.4) (2023-08-04)
 
 ### Bug Fixes
