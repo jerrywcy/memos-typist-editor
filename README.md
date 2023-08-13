@@ -17,14 +17,14 @@ This repository is forked from the original Typist repository to make a customiz
 
 <div align="center">
 
-[![GitHub: CI Validation](https://github.com/Doist/typist/actions/workflows/check-ci-validation.yml/badge.svg?branch=main)](https://github.com/Doist/typist/actions/workflows/check-ci-validation.yml?query=branch%3Amain)
-[![npm Version](https://img.shields.io/npm/v/@doist/typist)](https://www.npmjs.com/package/@doist/typist)
-[![npm Bundle Size (minified)](https://img.shields.io/bundlephobia/min/@doist/typist)](https://bundlephobia.com/package/@doist/typist)
-[![npm Downloads (monthly)](https://img.shields.io/npm/dm/@doist/typist?color=blue)](https://npmtrends.com/@doist/typist)
+[![GitHub: CI Validation](https://github.com/jerrywcy/memos-typist-editor/actions/workflows/check-ci-validation.yml/badge.svg?branch=main)](https://github.com/jerrywcy/memos-typist-editor/actions/workflows/check-ci-validation.yml?query=branch%3Amain)
+[![npm Version](https://img.shields.io/npm/v/jerrywcy/memos-typist-editor)](https://www.npmjs.com/package/jerrywcy/memos-typist-editor)
+[![npm Bundle Size (minified)](https://img.shields.io/bundlephobia/min/jerrywcy/memos-typist-editor)](https://bundlephobia.com/package/jerrywcy/memos-typist-editor)
+[![npm Downloads (monthly)](https://img.shields.io/npm/dm/jerrywcy/memos-typist-editor?color=blue)](https://npmtrends.com/jerrywcy/memos-typist-editor)
 
 [![semantic-release: Conventional Commits](https://img.shields.io/badge/semantic--release-Conventional%20Commits-e10079?logo=semantic-release)](https://github.com/semantic-release/semantic-release)
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](CODE_OF_CONDUCT.md)
-[![License: MIT](https://img.shields.io/github/license/doist/typist)](LICENSE.md)
+[![License: MIT](https://img.shields.io/github/license/jerrywcy/memos-typist-editor)](LICENSE.md)
 
 </div>
 
