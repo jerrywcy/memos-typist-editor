@@ -15,6 +15,7 @@ import { Strike } from '@tiptap/extension-strike'
 import { TaskList } from '@tiptap/extension-task-list'
 import { Text } from '@tiptap/extension-text'
 import { Typography } from '@tiptap/extension-typography'
+import { Underline } from '@tiptap/extension-underline'
 
 import { BLOCKQUOTE_EXTENSION_PRIORITY } from '../../constants/extension-priorities'
 import { CopyMarkdownSource } from '../shared/copy-markdown-source'
@@ -49,6 +50,7 @@ import type { OrderedListOptions } from '@tiptap/extension-ordered-list'
 import type { ParagraphOptions } from '@tiptap/extension-paragraph'
 import type { StrikeOptions } from '@tiptap/extension-strike'
 import type { TaskItemOptions } from '@tiptap/extension-task-item'
+import type { UnderlineOptions } from '@tiptap/extension-underline'
 import type { RichTextDocumentOptions } from './rich-text-document'
 import type { RichTextHorizontalRuleOptions } from './rich-text-horizontal-rule'
 import type { RichTextImageOptions } from './rich-text-image'
@@ -187,6 +189,11 @@ type RichTextKitOptions = {
      * Set to `false` to disable the `Typography` extension.
      */
     typography: false
+
+    /**
+     * Set options for the `Underline` extension, or `false` to disable.
+     */
+    underline: Partial<UnderlineOptions> | false
 }
 
 /**
@@ -330,6 +337,10 @@ const RichTextKit = Extension.create<RichTextKitOptions>({
 
         if (this.options.typography !== false) {
             extensions.push(Typography)
+        }
+
+        if (this.options.underline !== false) {
+            extensions.push(Underline.configure(this.options?.underline))
         }
 
         return extensions
