@@ -1,5 +1,4 @@
 import { Extension } from '@tiptap/core'
-import { BubbleMenu } from '@tiptap/extension-bubble-menu'
 import { History, HistoryOptions } from '@tiptap/extension-history'
 import { Text } from '@tiptap/extension-text'
 import { Typography } from '@tiptap/extension-typography'
@@ -14,7 +13,6 @@ import { PlainTextDocument } from './plain-text-document'
 import { PlainTextParagraph } from './plain-text-paragraph'
 
 import type { Extensions } from '@tiptap/core'
-import type { BubbleMenuOptions } from '@tiptap/extension-bubble-menu'
 import type { PlainTextDocumentOptions } from './plain-text-document'
 import type { PlainTextParagraphOptions } from './plain-text-paragraph'
 
@@ -22,11 +20,6 @@ import type { PlainTextParagraphOptions } from './plain-text-paragraph'
  * The options available to customize the `PlainTextKit` extension.
  */
 type PlainTextKitOptions = {
-    /**
-     * Set options for the `Document` extension, or `false` to disable.
-     */
-    bubbleMenu: Partial<BubbleMenuOptions> | false
-
     /**
      * Set options for the `Document` extension, or `false` to disable.
      */
@@ -72,10 +65,6 @@ const PlainTextKit = Extension.create<PlainTextKitOptions>({
     name: 'plainTextKit',
     addExtensions() {
         const extensions: Extensions = []
-
-        if (this.options.bubbleMenu !== false) {
-            extensions.push(BubbleMenu.configure(this.options?.bubbleMenu))
-        }
 
         if (this.options.document !== false) {
             extensions.push(

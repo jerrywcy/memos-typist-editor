@@ -1,7 +1,6 @@
 import { Extension } from '@tiptap/core'
 import { Blockquote } from '@tiptap/extension-blockquote'
 import { Bold } from '@tiptap/extension-bold'
-import { BubbleMenu } from '@tiptap/extension-bubble-menu'
 import { CodeBlock } from '@tiptap/extension-code-block'
 import { Dropcursor } from '@tiptap/extension-dropcursor'
 import { Gapcursor } from '@tiptap/extension-gapcursor'
@@ -38,7 +37,6 @@ import { RichTextTaskItem } from './rich-text-task-item'
 import type { Extensions } from '@tiptap/core'
 import type { BlockquoteOptions } from '@tiptap/extension-blockquote'
 import type { BoldOptions } from '@tiptap/extension-bold'
-import type { BubbleMenuOptions } from '@tiptap/extension-bubble-menu'
 import type { BulletListOptions } from '@tiptap/extension-bullet-list'
 import type { CodeOptions } from '@tiptap/extension-code'
 import type { CodeBlockOptions } from '@tiptap/extension-code-block'
@@ -71,11 +69,6 @@ type RichTextKitOptions = {
      * Set options for the `Bold` extension, or `false` to disable.
      */
     bold: Partial<BoldOptions> | false
-
-    /**
-     * Set options for the `BubbleMenu` extension, or `false` to disable.
-     */
-    bubbleMenu: Partial<BubbleMenuOptions> | false
 
     /**
      * Set options for the `BulletList` extension, or `false` to disable.
@@ -223,10 +216,6 @@ const RichTextKit = Extension.create<RichTextKitOptions>({
 
         if (this.options.bold !== false) {
             extensions.push(Bold.configure(this.options?.bold))
-        }
-
-        if (this.options.bubbleMenu !== false) {
-            extensions.push(BubbleMenu.configure(this.options?.bubbleMenu))
         }
 
         if (this.options.bulletList !== false) {
