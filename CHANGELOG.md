@@ -1,3 +1,9 @@
+## [1.7.1](https://github.com/jerrywcy/memos-typist-editor/compare/v1.7.0...v1.7.1) (2023-08-16)
+
+### Bug Fixes
+
+-   use BubbleMenu from @tiptap/react instead of @tiptap/extension-bubble-menu ([db48119](https://github.com/jerrywcy/memos-typist-editor/commit/db4811967bf172c03f669c5128f32fe97c2b3de4))
+
 ## [1.7.0](https://github.com/jerrywcy/memos-typist-editor/compare/v1.6.0...v1.7.0) (2023-08-16)
 
 ### Features
