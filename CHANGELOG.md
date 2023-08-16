@@ -1,3 +1,9 @@
+## [1.7.0](https://github.com/jerrywcy/memos-typist-editor/compare/v1.6.0...v1.7.0) (2023-08-16)
+
+### Features
+
+-   add support for bubble menu ([fa258b7](https://github.com/jerrywcy/memos-typist-editor/commit/fa258b796399de36f0a15501b5d72493a466b517))
+
 ## [1.6.0](https://github.com/jerrywcy/memos-typist-editor/compare/v1.5.0...v1.6.0) (2023-08-14)
 
 ### Features
