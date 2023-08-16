@@ -6,6 +6,7 @@ import { Dropcursor } from '@tiptap/extension-dropcursor'
 import { Gapcursor } from '@tiptap/extension-gapcursor'
 import { HardBreak } from '@tiptap/extension-hard-break'
 import { Heading } from '@tiptap/extension-heading'
+import { Highlight } from '@tiptap/extension-highlight'
 import { History } from '@tiptap/extension-history'
 import { Italic } from '@tiptap/extension-italic'
 import { ListItem } from '@tiptap/extension-list-item'
@@ -43,6 +44,7 @@ import type { CodeBlockOptions } from '@tiptap/extension-code-block'
 import type { DropcursorOptions } from '@tiptap/extension-dropcursor'
 import type { HardBreakOptions } from '@tiptap/extension-hard-break'
 import type { HeadingOptions } from '@tiptap/extension-heading'
+import type { HighlightOptions } from '@tiptap/extension-highlight'
 import type { HistoryOptions } from '@tiptap/extension-history'
 import type { ItalicOptions } from '@tiptap/extension-italic'
 import type { ListItemOptions } from '@tiptap/extension-list-item'
@@ -109,6 +111,11 @@ type RichTextKitOptions = {
      * Set options for the `Heading` extension, or `false` to disable.
      */
     heading: Partial<HeadingOptions> | false
+
+    /**
+     * Set options for the `Heading` extension, or `false` to disable.
+     */
+    highlight: Partial<HighlightOptions> | false
 
     /**
      * Set options for the `History` extension, or `false` to disable.
@@ -284,6 +291,10 @@ const RichTextKit = Extension.create<RichTextKitOptions>({
 
         if (this.options.heading !== false) {
             extensions.push(Heading.configure(this.options?.heading))
+        }
+
+        if (this.options.highlight !== false) {
+            extensions.push(Highlight.configure(this.options?.highlight))
         }
 
         if (this.options.history !== false) {

@@ -88,7 +88,6 @@ jobs:
                   cache: npm
                   node-version-file: .node-version
                   registry-url: https://npm.pkg.github.com/
-                  scope: '@doist'
 
             - name: Disable npm package provenance (unsupported by GitHub Packages)
               if: ${{ steps.semantic-release.outputs.package-published == 'true' }}

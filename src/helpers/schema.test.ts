@@ -61,7 +61,7 @@ describe('Helper: Schema', () => {
     describe('#computeSchemaId', () => {
         test('returns a string ID that matches the given editor schema', () => {
             expect(computeSchemaId(getSchema([RichTextKit]))).toBe(
-                'link,bold,italic,boldAndItalics,strike,underline,code,paragraph,blockquote,bulletList,codeBlock,doc,hardBreak,heading,horizontalRule,image,listItem,orderedList,taskList,taskItem,text',
+                'link,bold,highlight,italic,boldAndItalics,strike,underline,code,paragraph,blockquote,bulletList,codeBlock,doc,hardBreak,heading,horizontalRule,image,listItem,orderedList,taskList,taskItem,text',
             )
         })
     })
