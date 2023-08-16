@@ -1,3 +1,9 @@
+## [1.8.0](https://github.com/jerrywcy/memos-typist-editor/compare/v1.7.1...v1.8.0) (2023-08-16)
+
+### Features
+
+-   add support for highlight ([d522a0e](https://github.com/jerrywcy/memos-typist-editor/commit/d522a0ed4813f997e94afc4e1c5069fba577a7a9))
+
 ## [1.7.1](https://github.com/jerrywcy/memos-typist-editor/compare/v1.7.0...v1.7.1) (2023-08-16)
 
 ### Bug Fixes
