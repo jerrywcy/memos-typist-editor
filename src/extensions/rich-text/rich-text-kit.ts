@@ -2,6 +2,7 @@ import { Extension } from '@tiptap/core'
 import { Blockquote } from '@tiptap/extension-blockquote'
 import { Bold } from '@tiptap/extension-bold'
 import { CodeBlock } from '@tiptap/extension-code-block'
+import { CodeBlockLowlight } from '@tiptap/extension-code-block-lowlight'
 import { Dropcursor } from '@tiptap/extension-dropcursor'
 import { Gapcursor } from '@tiptap/extension-gapcursor'
 import { HardBreak } from '@tiptap/extension-hard-break'
@@ -17,6 +18,7 @@ import { TaskList } from '@tiptap/extension-task-list'
 import { Text } from '@tiptap/extension-text'
 import { Typography } from '@tiptap/extension-typography'
 import { Underline } from '@tiptap/extension-underline'
+import { lowlight } from 'lowlight/lib/common'
 
 import { BLOCKQUOTE_EXTENSION_PRIORITY } from '../../constants/extension-priorities'
 import { CopyMarkdownSource } from '../shared/copy-markdown-source'
@@ -41,6 +43,7 @@ import type { BoldOptions } from '@tiptap/extension-bold'
 import type { BulletListOptions } from '@tiptap/extension-bullet-list'
 import type { CodeOptions } from '@tiptap/extension-code'
 import type { CodeBlockOptions } from '@tiptap/extension-code-block'
+import type { CodeBlockLowlightOptions } from '@tiptap/extension-code-block-lowlight'
 import type { DropcursorOptions } from '@tiptap/extension-dropcursor'
 import type { HardBreakOptions } from '@tiptap/extension-hard-break'
 import type { HeadingOptions } from '@tiptap/extension-heading'
@@ -88,6 +91,11 @@ type RichTextKitOptions = {
     codeBlock: Partial<CodeBlockOptions> | false
 
     /**
+     * Set options for the `CodeBlockLowlight` extension, or `false` to disable.
+     */
+    codeBlockLowlight: Partial<CodeBlockLowlightOptions> | false
+
+    /**
      * Set options for the `Document` extension, or `false` to disable.
      */
     document: Partial<RichTextDocumentOptions> | false
@@ -113,7 +121,7 @@ type RichTextKitOptions = {
     heading: Partial<HeadingOptions> | false
 
     /**
-     * Set options for the `Heading` extension, or `false` to disable.
+     * Set options for the `Highlight` extension, or `false` to disable.
      */
     highlight: Partial<HighlightOptions> | false
 
@@ -232,7 +240,6 @@ const RichTextKit = Extension.create<RichTextKitOptions>({
         if (this.options.code !== false) {
             extensions.push(
                 RichTextCode.configure(this.options?.code),
-
                 // Enhances the Code extension capabilities with additional features
                 CurvenoteCodemark,
             )
@@ -240,6 +247,12 @@ const RichTextKit = Extension.create<RichTextKitOptions>({
 
         if (this.options.codeBlock !== false) {
             extensions.push(CodeBlock.configure(this.options?.codeBlock))
+        }
+
+        if (this.options.codeBlockLowlight !== false) {
+            extensions.push(
+                CodeBlockLowlight.configure({ lowlight, ...this.options?.codeBlockLowlight }),
+            )
         }
 
         if (this.options.document !== false) {

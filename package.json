@@ -53,6 +53,7 @@
         "@tiptap/extension-character-count": "2.0.3",
         "@tiptap/extension-code": "2.0.3",
         "@tiptap/extension-code-block": "2.0.3",
+        "@tiptap/extension-code-block-lowlight": "2.1.0",
         "@tiptap/extension-document": "2.0.3",
         "@tiptap/extension-dropcursor": "2.0.3",
         "@tiptap/extension-gapcursor": "2.0.3",
@@ -78,6 +79,7 @@
         "@tiptap/pm": "2.0.3",
         "@tiptap/react": "2.0.3",
         "@tiptap/suggestion": "2.0.3",
+        "lowlight": "2.9.0",
         "prosemirror-codemark": "0.4.2"
     },
     "devDependencies": {

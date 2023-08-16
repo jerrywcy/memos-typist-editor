@@ -637,14 +637,13 @@ I need to add another paragraph below the second list item.
                 )
             })
 
-            test('code block HTML output is preserved', () => {
+            test('code block HTML output is turned into syntax highlighting', () => {
                 expect(htmlSerializer.serialize(MARKDOWN_INPUT_CODE_BLOCK)).toBe(
-                    `<p>\`\`\`</p>&lt;html>
+                    `<pre><code>&lt;html>
   &lt;head>
     &lt;title>Test&lt;/title>
   &lt;/head>
-&lt;/html>
-\`\`\``,
+&lt;/html></code></pre>`,
                 )
             })
 
@@ -655,12 +654,13 @@ I need to add another paragraph below the second list item.
 2. Image:
 ![Octobi Wan Catnobi](https://octodex.github.com/images/octobiwan.jpg)
 3. Codeblock:
-\`\`\`</p>    &lt;html>
-      &lt;head>
-        &lt;title>Test&lt;/title>
-      &lt;/head>
-    &lt;/html>
-    \`\`\``)
+\`\`\`
+&lt;html>
+&lt;head>
+&lt;title>Test&lt;/title>
+&lt;/head>
+&lt;/html>
+\`\`\`</p>`)
             })
 
             test('horizontal rules HTML output is preserved', () => {
