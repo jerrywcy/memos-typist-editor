@@ -1,3 +1,9 @@
+## [1.9.0](https://github.com/jerrywcy/memos-typist-editor/compare/v1.8.0...v1.9.0) (2023-08-17)
+
+### Features
+
+-   add support for code block syntax highlighting ([f3a31a4](https://github.com/jerrywcy/memos-typist-editor/commit/f3a31a49c0cab6d4be102a2b258d776b64e9275f))
+
 ## [1.8.0](https://github.com/jerrywcy/memos-typist-editor/compare/v1.7.1...v1.8.0) (2023-08-16)
 
 ### Features
