@@ -1,3 +1,9 @@
+## [1.9.1](https://github.com/jerrywcy/memos-typist-editor/compare/v1.9.0...v1.9.1) (2023-08-23)
+
+### Bug Fixes
+
+-   task list nesting failed due to wrong configuration ([93d555a](https://github.com/jerrywcy/memos-typist-editor/commit/93d555a77bac9b44383916bff8219aa7743428e5))
+
 ## [1.9.0](https://github.com/jerrywcy/memos-typist-editor/compare/v1.8.0...v1.9.0) (2023-08-17)
 
 ### Features
