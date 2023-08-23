@@ -351,8 +351,8 @@ const RichTextKit = Extension.create<RichTextKitOptions>({
         }
 
         if (this.options.taskList !== false) {
-            extensions.push(TaskList.configure(this.options?.taskList))
-            extensions.push(RichTextTaskItem)
+            extensions.push(TaskList)
+            extensions.push(RichTextTaskItem.configure(this.options?.taskList))
         }
 
         if (this.options.text !== false) {
