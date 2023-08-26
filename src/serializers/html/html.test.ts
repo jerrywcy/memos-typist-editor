@@ -494,13 +494,13 @@ Answer: [Doist Frontend](channel://190200)`),
 
             test('links HTML output is correct', () => {
                 expect(htmlSerializer.serialize(MARKDOWN_INPUT_LINKS)).toBe(
-                    '<p>My favorite search engine is <a href="https://duckduckgo.com">Duck Duck Go</a>.<br>My favorite search engine is <a href="https://duckduckgo.com" title="The best search engine for privacy">Duck Duck Go</a>.<br>My favorite search engine is <a href="https://duckduckgo.com">https://duckduckgo.com</a>.</p>',
+                    '<p>My favorite search engine is <a href="https://duckduckgo.com">Duck Duck Go</a>.<br>My favorite search engine is <a href="https://duckduckgo.com" title="The best search engine for privacy">Duck Duck Go</a>.<br>My favorite search engine is https://duckduckgo.com.</p>',
                 )
             })
 
             test('styled links HTML output is correct', () => {
                 expect(htmlSerializer.serialize(MARKDOWN_INPUT_STYLED_LINKS)).toBe(
-                    '<p>I love supporting the <strong><a href="https://eff.org">EFF</a></strong>.<br>I love supporting the <strong><a href="https://eff.org">https://eff.org</a></strong>.<br>This is the <em><a href="https://www.markdownguide.org">Markdown Guide</a></em>.<br>This is the <em><a href="https://www.markdownguide.org">https://www.markdownguide.org</a></em>.<br>See the section on <a href="#code"><code>code</code></a>.</p>',
+                    '<p>I love supporting the <strong><a href="https://eff.org">EFF</a></strong>.<br>I love supporting the <strong>https://eff.org</strong>.<br>This is the <em><a href="https://www.markdownguide.org">Markdown Guide</a></em>.<br>This is the <em>https://www.markdownguide.org</em>.<br>See the section on <a href="#code"><code>code</code></a>.</p>',
                 )
             })
         })
