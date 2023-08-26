@@ -1,7 +1,7 @@
 {
     "name": "memos-typist-editor",
     "description": "The mighty Tiptap-based rich-text editor React component that powers PKMer Memos.",
-    "version": "1.9.1",
+    "version": "1.10.0",
     "license": "MIT",
     "homepage": "https://typist.doist.dev/",
     "repository": "https://github.com/jerrywcy/memos-typist-editor",

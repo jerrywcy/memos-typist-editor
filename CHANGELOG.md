@@ -1,3 +1,9 @@
+## [1.10.0](https://github.com/jerrywcy/memos-typist-editor/compare/v1.9.1...v1.10.0) (2023-08-26)
+
+### Features
+
+-   remove autolink ([da310be](https://github.com/jerrywcy/memos-typist-editor/commit/da310beb5d3fd128183ef24fc80980679cd0bb3d))
+
 ## [1.9.1](https://github.com/jerrywcy/memos-typist-editor/compare/v1.9.0...v1.9.1) (2023-08-23)
 
 ### Bug Fixes
