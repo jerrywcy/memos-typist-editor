@@ -33,16 +33,6 @@ const COMMON_STORY_EXTENSIONS: Extensions = [HashtagSuggestion, MentionSuggestio
 export const Default: StoryObj<typeof TypistEditor> = {
     args: {
         ...DEFAULT_STORY_ARGS,
-        bubbleMenuProps: {
-            shouldShow: (props) => {
-                // console.log(props.state.selection.empty);
-                return !props.state.selection.empty
-            },
-            tippyOptions: {
-                duration: 100,
-            },
-            children: <button>bubble</button>,
-        },
         placeholder: 'A full rich-text editor, be creative…',
         extensions: [
             RichTextKit.configure(DEFAULT_RICH_TEXT_KIT_OPTIONS),

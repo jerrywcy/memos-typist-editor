@@ -2,7 +2,7 @@ import { forwardRef, useCallback, useImperativeHandle, useMemo } from 'react'
 
 import { getSchema } from '@tiptap/core'
 import { Placeholder } from '@tiptap/extension-placeholder'
-import { BubbleMenu, BubbleMenuProps, EditorContent } from '@tiptap/react'
+import { EditorContent } from '@tiptap/react'
 
 import { ExtraEditorCommands } from '../extensions/core/extra-editor-commands/extra-editor-commands'
 import { ViewEventHandlers, ViewEventHandlersOptions } from '../extensions/core/view-event-handlers'
@@ -88,8 +88,6 @@ type TypistEditorProps = {
      * Auto focus the editor to the end of the document on initialization.
      */
     autoFocus?: boolean
-
-    bubbleMenuProps?: Omit<BubbleMenuProps, 'editor'>
 
     /**
      * The CSS class for the container surrounding the editor DOM element.
@@ -218,7 +216,6 @@ type TypistEditorProps = {
 const TypistEditor = forwardRef<TypistEditorRef, TypistEditorProps>(function TypistEditor(
     {
         autoFocus,
-        bubbleMenuProps,
         className,
         content = '',
         contentSelection,
@@ -423,12 +420,7 @@ const TypistEditor = forwardRef<TypistEditorRef, TypistEditorProps>(function Typ
         [editor, markdownSerializer],
     )
 
-    return (
-        <>
-            {bubbleMenuProps && editor && <BubbleMenu editor={editor} {...bubbleMenuProps} />}
-            <EditorContent className={className} editor={editor} />
-        </>
-    )
+    return <EditorContent className={className} editor={editor} />
 })
 
 export { TypistEditor }
