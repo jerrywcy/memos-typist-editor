@@ -1,3 +1,9 @@
+## [1.10.1](https://github.com/jerrywcy/memos-typist-editor/compare/v1.10.0...v1.10.1) (2023-08-29)
+
+### Bug Fixes
+
+-   remove bubbleMenuProps ([8f7bba8](https://github.com/jerrywcy/memos-typist-editor/commit/8f7bba84c940577234524e4b78ec88581eb23553))
+
 ## [1.10.0](https://github.com/jerrywcy/memos-typist-editor/compare/v1.9.1...v1.10.0) (2023-08-26)
 
 ### Features
